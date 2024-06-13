@@ -2,3 +2,10 @@ torch==2.3.0
 os
 sys==3.10.12
 glob
+PIL
+torchvision
+typing
+tqdm
+pathlib
+timeit
+sklearn
