@@ -21,8 +21,8 @@ BATCH_SIZE = 100 # done
 LEARNING_RATE = 0.001 # done
 
 # Load train, valid and test data: Done
-train_dir = "train"
-test_dir = "test1"
+train_dir = "data/train"
+test_dir = "data/valid"
 train_list = glob.glob(os.path.join(train_dir, "*.jpg"))
 test_list = glob.glob(os.path.join(test_dir, "*.jpg"))
 train_list, valid_list = train_test_split(train_list, test_size=0.3, random_state=42)
