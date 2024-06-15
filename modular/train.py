@@ -13,7 +13,6 @@ from sklearn.model_selection import train_test_split
 # Add the parent directory of 'modular' to the system path
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from data_setup import create_dataloaders
-
 import engine, model_builder, utils
 
 # Setup hyperparameters

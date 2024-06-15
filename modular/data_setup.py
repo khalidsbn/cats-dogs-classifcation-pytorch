@@ -3,14 +3,39 @@ Contains functionality for creating PyTorch DataLoader's for
 image classification data.
 """
 import os
-from typing import List, Tuple
 from PIL import Image
+from typing import List, Tuple
 from torchvision import transforms
 from torch.utils.data import DataLoader, Dataset
 
 NUM_WORKERS = os.cpu_count()
 
 class CustomDataset(Dataset):
+    """
+    A custom dataset class for loading and transforming images.
+
+    Args:
+        file_list (List[str]): A list of file paths to the images.
+        transform (callable, optional): An optional transform to be applied to the images.
+
+    Attributes:
+        file_list (List[str]): Stores the list of image file paths.
+        transform (callable, optional): Stores the transform to be applied to the images.
+
+    Methods:
+        __len__():
+            Returns:
+                int: The total number of images in the dataset.
+
+        __getitem__(idx):
+            Args:
+                idx (int): The index of the image to retrieve.
+
+            Returns:
+                tuple: A tuple containing:
+                    - img (PIL.Image.Image): The transformed image.
+                    - label (int): The label of the image, where 'dog' is 1, 'cat' is 0, and any undefined label is -1.
+    """
     def __init__(self, file_list: List[str], transform=None):
         self.file_list = file_list
         self.transform = transform
@@ -34,14 +59,12 @@ class CustomDataset(Dataset):
 
         return img, label
 
-def create_dataloaders(
-    train_list: List[str],
-    valid_list: List[str],
-    test_list: List[str],
-    transform: transforms.Compose,
-    batch_size: int,
-    num_workers: int = NUM_WORKERS,
-) -> Tuple[DataLoader, DataLoader, DataLoader]:
+def create_dataloaders(train_list: List[str],
+                       valid_list: List[str],
+                       test_list: List[str],
+                       transform: transforms.Compose,
+                       batch_size: int,
+                       num_workers: int = NUM_WORKERS) -> Tuple[DataLoader, DataLoader, DataLoader]:
     """Creates training, validation, and testing DataLoaders.
 
     Args:

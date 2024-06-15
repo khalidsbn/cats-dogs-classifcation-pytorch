@@ -1,9 +1,9 @@
 """
 Contains functiosn for training and testing a PyTorch model.
 """
-from typing import Dict, List, Tuple
 import torch
 from tqdm.auto import tqdm
+from typing import Dict, List, Tuple
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 torch.manual_seed(42)
