@@ -1,6 +1,6 @@
-torch==2.3.0
+torch
 os
-sys==3.10.12
+sys
 glob
 PIL
 torchvision
