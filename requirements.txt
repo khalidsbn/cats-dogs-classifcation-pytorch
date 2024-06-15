@@ -1,11 +1,6 @@
-torch
-os
-sys
-glob
-PIL
+torch==2.2.2
 torchvision
+Pillow
 typing
 tqdm
-pathlib
-timeit
-sklearn
+scikit-learn
