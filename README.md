@@ -58,7 +58,7 @@ git clone https://github.com/khalidsbn/cats-dogs-classifcation-pytorch.git
 python3 -m venv .venv
 source .venv/bin/activate
 ```
-3. Install the required dependencies (pandas, Numpy, etc)
+3. Install the required dependencies (Torch, scklearn, etc)
 ```
 pip install -r requirements.txt
 ```
