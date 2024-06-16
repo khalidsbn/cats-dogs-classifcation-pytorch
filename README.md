@@ -31,7 +31,7 @@ going_modular/
     │   └── ...
     └── test/
         ├── 8.jpg
-        ├── 8.jpg
+        ├── 9.jpg
         └── ...
         
 ```
