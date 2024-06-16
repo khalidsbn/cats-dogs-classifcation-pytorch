@@ -3,11 +3,10 @@
 </div>
 
 
-# Introduction:
-
+## Introduction:
+This project aims to develop an algorithm to classify images as containing either a dog or a cat. While this task is straightforward for humans and our pets, it poses a significant challenge for computers. Leveraging the dataset from the competition, we aim to build and train a binary classification model using PyTorch. This process involves preprocessing the image data, designing a neural network architecture, and fine-tuning the model to distinguish between images of dogs and cats accurately. Through this project, we explore various deep learning techniques and demonstrate the application of PyTorch in solving a real-world image classification problem.
 
 ## A directory structure: 
-
 ```
 going_modular/
 ├── binary_classification_with_PyTorch.ipynb
@@ -34,4 +33,24 @@ going_modular/
         ├── 9.jpg
         └── ...
         
+```
+
+## How to Run the model:
+1. Colone this repo
+```
+git clone https://github.com/khalidsbn/cats-dogs-classifcation-pytorch.git
+```
+2. Create and activate a virtual environment
+```
+python3 -m venv .venv
+source .venv/bin/activate
+```
+3. Install the required dependencies (pandas, Numpy, etc)
+```
+pip install -r requirements.txt
+```
+4. Train the model
+Open project on terminal, and run:
+```
+!python modular/train.py
 ```
