@@ -3,7 +3,7 @@ import torch
 import torch.nn as nn
 
 class CNN(nn.Module):
-    """Creates CNN architecture."""
+  """Creates CNN architecture."""
     
   def __init__(self):
     super(CNN, self).__init__()
