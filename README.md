@@ -34,6 +34,19 @@ going_modular/
         └── ...
         
 ```
+**modular**: This folder contains all the essential code for the project.
+**binary_classification_with_PyTorch.ipynb**: The main Jupyter notebook that retrieves the dataset using the Kaggle API.
+**script_mode.ipynb**: A streamlined Jupyter notebook containing only the necessary code to run and train the model.
+
+## CNN Architecture:
+The CNN architecture used to train the model can be broken down into:
+* Input Layer
+* Layer 1: Convolutional + BatchNorm + ReLU + MaxPooling
+* Layer 2: Convolutional + BatchNorm + ReLU + MaxPooling
+* Layer 3: Convolutional + BatchNorm + ReLU + MaxPooling
+* Flattening Layer
+* Fully Connected Layer 1
+* Fully Connected Layer 2
 
 ## How to Run the model:
 1. Colone this repo
